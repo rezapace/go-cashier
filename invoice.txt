@@ -1,0 +1,4 @@
+Nama Barang: mainan
+Harga Satuan: Rp10000
+Jumlah: 12
+Total: Rp120000

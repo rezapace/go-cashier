@@ -1,0 +1,116 @@
+{
+    "info": {
+      "name": "MyApp API",
+      "_postman_id": "12345-67890-abcdef",
+      "description": "Postman collection for MyApp API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Get All Barang",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8080/barang",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["barang"]
+          }
+        }
+      },
+      {
+        "name": "Get Barang By ID",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8080/barang/:id",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["barang", ":id"],
+            "variable": [
+              {
+                "key": "id",
+                "value": "1"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Create Barang",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"nama\": \"mainan\",\n  \"harga\": 10000\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8080/barang",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["barang"]
+          }
+        }
+      },
+      {
+        "name": "Update Barang",
+        "request": {
+          "method": "PUT",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"nama\": \"mainan baru\",\n  \"harga\": 15000\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8080/barang/:id",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["barang", ":id"],
+            "variable": [
+              {
+                "key": "id",
+                "value": "1"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Delete Barang",
+        "request": {
+          "method": "DELETE",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8080/barang/:id",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["barang", ":id"],
+            "variable": [
+              {
+                "key": "id",
+                "value": "1"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }

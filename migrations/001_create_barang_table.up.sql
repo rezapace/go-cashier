@@ -1,0 +1,5 @@
+CREATE TABLE barang (
+    id SERIAL PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    harga INT NOT NULL
+);
